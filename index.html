@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+  <section>
+    <container>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <ul class="left">
+              <li><a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a></li>
+            </ul>
+            <ul class="right">
+              <li><a href="#!"><i class="material-icons">notifications</i></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <ul id="slide-out" class="side-nav">
+        <li><div class="user-view">
+          <div class="background">
+            <img src="img/office.jpg">
+          </div>
+          <a href="#!user"><img class="circle" src="img/yuna.jpg"></a>
+          <a href="#!name"><span class="white-text name">John Doe</span></a>
+          <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        </div></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">person</i>Profile</a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">message</i>Messages <span class="new badge blue">4</span></a></li>
+        <li><a href="#!" class="waves-effect"><i class="material-icons">assignment_ind</i>Service Requests</a></li>
+        
+        <li><div class="divider"></div></li>
+        <li><a class="waves-effect" href="#!">News</a></li>
+        <li><a class="waves-effect" href="#!">Events</a></li>
+        <li><a class="waves-effect" href="#!">Settings</a></li>
+        <li><a class="waves-effect" href="#!">Abouts</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+      </ul>
+      
+      <!-- The folating button with options -->
+
+      <div class="fixed-action-btn click-to-toggle">
+        <a class="btn-floating btn-large red pulse" id="pulse">
+          <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+          <li><a class="btn-floating red"><i class="material-icons">home</i></a></li>
+          <li><a class="btn-floating yellow darken-1"><i class="material-icons">photo_camera</i></a></li>
+          <li><a class="btn-floating green"><i class="material-icons">send</i></a></li>
+          <li><a class="btn-floating blue"><i class="material-icons">contacts</i></a></li>
+          <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+        </ul>
+      </div>
+    </container>
+    <div class="container center-align">
+        <div class="col s8">
+          <h1 class="center-align">Verified</h1>        
+      </div>
+    </div>
+  </section>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script>
+    $(".button-collapse").sideNav();
+
+    //remove pulse onCLick
+    $('#pulse').on('click', function () {
+    $(this).toggleClass('pulse')
+});
+  </script>
+</body>
+</html>
