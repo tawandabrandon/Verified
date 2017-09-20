@@ -55,8 +55,8 @@
           <i class="large material-icons red">add</i>
         </a>
         <ul>
-          <li><a class="btn-floating red"><i class="material-icons">edit</i></a></li>
-          <li><a class="btn-floating yellow darken-1"><i class="material-icons">photo_camera</i></a></li>
+          <li><a class="btn-floating red" href="#addContact"><i class="material-icons">edit</i></a></li>
+          <li><a class="btn-floating yellow darken-1" href="#scanQR"><i class="material-icons">photo_camera</i></a></li>
         </ul>
       </div>
     </container>
@@ -168,6 +168,29 @@
 </ul>
 </div>
 </section>
+<section>
+  <!-- Add Contact Modal -->
+  <div id="addContact" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Add Contact</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+
+  <!-- Scan QR Modal -->
+  <div id="scanQR" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Scan QR</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+</section>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
@@ -188,6 +211,13 @@
       console.log(val + ' was selected')
     },
     minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+  });
+
+  //contacts modals
+    $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.scanQR').modal();
+    $('.addContact').modal();
   });
 </script>
 </body>
