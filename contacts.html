@@ -61,7 +61,14 @@
       </div>
     </container>
     <div class="container">
-      <ul class="collection">
+      <ul class="collection with-header">
+        <li class="collection-header">
+          <div class="input-field col s12">
+          <i class="material-icons prefix">search</i>
+            <input type="text" id="autocomplete" class="autocomplete">
+            <label for="autocomplete">Search</label>
+          </div>
+        </li>
         <li class="collection-item avatar dismissable">
           <img src="img/yuna.jpg" alt="" class="circle">
           <span class="title">Yuna Yala</span>
@@ -163,10 +170,25 @@
 </section>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script>
   $(".button-collapse").sideNav();
-});
+
+  //autoComplete
+    $('#autocomplete').autocomplete({
+    source: {
+      "Lundi": null,
+      "Yuna": null,
+      "Melusi": 'https://placehold.it/250x250'
+    },
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+    onAutocomplete: function(val) {
+      console.log(val + ' was selected')
+    },
+    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+  });
 </script>
 </body>
 </html>
