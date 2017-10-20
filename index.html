@@ -47,11 +47,24 @@
         <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
       </ul>
       
+
+      <!-- Element Showed -->
+      
+      <!-- Tap Target Structure -->
+      <div class="tap-target" data-activates="menu">
+        <div class="tap-target-content">
+          <h5>Click here to get Started!</h5>
+          <p>From here you can access your contacts, Scan QR Codes and so much more!</p>
+        </div>
+      </div>
+          
+
+
       <!-- The folating button with options -->
 
       <div class="fixed-action-btn click-to-toggle">
-        <a class="btn-floating btn-large red pulse" id="pulse">
-          <i class="large material-icons">mode_edit</i>
+        <a class="btn-floating btn-large red" id="menu">
+          <i class="large material-icons">star</i>
         </a>
         <ul>
           <li><a class="btn-floating red"><i class="material-icons">home</i></a></li>
@@ -72,6 +85,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
+    $('.tap-target').tapTarget('open');
     $(".button-collapse").sideNav();
 
     //remove pulse onCLick
